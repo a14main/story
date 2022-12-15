@@ -119,7 +119,7 @@ function showErrorMessage(msg) {
 }
 
 function loadData() {
-  fetch("https://a14main.github.io/story/data/data.json")
+  fetch("/data/data.json")
     .then((response) => response.json())
     .then((json) => {
       initialize(json);
