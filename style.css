@@ -20,7 +20,7 @@ body {
   align-items: stretch;
   background-color: #111;
   color: #eee;
-  background: url("https://a14main.github.io/story/background.jpg");
+  background: url("/background.jpg");
 }
 
 .container {
