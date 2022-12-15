@@ -1,1 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Oxygen:wght@300&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  font-family: 'Oxygen Mono', monospace;
+
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: #111;
+  color: #eee;
+  background: url("https://a14main.github.io/story/background.jpg");
+}
+
+.container {
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Oxygen Mono', monospace;
+  padding: .5rem 1rem;
+}
+
+.title {
+  font-family: 'Oxygen', sans-serif;
+  color: #eee;
+}
+
+.subtitle {
+  color: #ccc;
+}
+
+.main {
+  flex: 1 1 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 0 100%;
+  padding: 19%;
+  gap: 0.25rem;
+}
+
+.choices {
+  padding-top: 1.5rem;
+  gap: .25rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.choice {
+  text-align: center;
+  padding: 0.25rem;
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Oxygen Mono', monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  cursor: pointer;
+  transition: opacity 1s;
+}
+
+.disabled {
+  opacity: 0;
+  
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0px;
+}
+
+.text {
+  flex: 8 1 0px;
+  overflow: auto;
+  color: #ccc;
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.divider {
+  
+}
+
+.chosen {
+  color: #888;
+}
+
+#begin {
+  display: flex;
+  align-items: center;
+}
+
+p.text, .choice {
+  opacity: 0;
+  text-shadow: .5rem 0 .25rem #fff, -.5rem 0 .25rem #fff;
+  animation: fadein 2s forwards;
+}
+
+@keyframes fadein {
+  0%: {
+    opacity: 0;
+  }
+  50%: {
+    opacity: .5;
+    text-shadow: .5rem 0 .25rem #fff;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 0;
+  }
+}
