@@ -107,9 +107,16 @@ body {
   overflow: auto;
   color: #ccc;
   
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
+}
+
+.text::-webkit-scrollbar {
+  display: none;
 }
 
 .divider {
