@@ -54,6 +54,13 @@ body {
   overflow: auto;
   display: flex;
   flex-direction: column;
+  
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.main::-webkit-scrollbar {
+  display: none;
 }
 
 .section {
